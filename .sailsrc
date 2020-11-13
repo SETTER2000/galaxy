@@ -1,7 +1,8 @@
 {
-  "generators": {
-    "modules": {}
-  },
+   "generators": {
+     "modules": {
+     "component":"./sails-generate-component"}
+   },
   "_generatedWith": {
     "sails": "1.4.0",
     "sails-generate": "2.0.0"
