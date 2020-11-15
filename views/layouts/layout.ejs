@@ -5,15 +5,23 @@
 } %><!DOCTYPE html>
 <html>
 <head>
-    <title><%= seo.title %></title>
-    <meta name="description" content="<%= seo.description %>">
-    <% /* Viewport tag for sensible mobile support */ %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:url" content="<%= seo.canonical %>"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="<%= seo.title %>"/>
-    <meta property="og:description" content="<%= seo.description %>"/>
-    <meta property="og:image" content="<%= seo.image %>"/>
+
+    <%
+    if(typeof seo === 'undefined') { %>
+        <title>Шоу Галактика питомник</title>
+        <% } else { %>
+        <title><%= seo.title %></title>
+        <meta name="description" content="<%= seo.description %>">
+        <% /* Viewport tag for sensible mobile support */ %>
+
+        <meta property="og:url" content="<%= seo.canonical %>"/>
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="<%= seo.title %>"/>
+        <meta property="og:description" content="<%= seo.description %>"/>
+        <meta property="og:image" content="<%= seo.image %>"/>
+
+        <% } %>
     <% /* Script tags should normally be included further down the page- but any
     scripts that load fonts (e.g. Fontawesome ≥v5) are special exceptions to the
     rule. (Include them up here along with any hard-coded «link» tags for Typekit,

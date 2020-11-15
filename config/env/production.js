@@ -46,6 +46,16 @@ module.exports = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
+
+    mongodb: {
+      adapter:'sails-mongo',
+      host:        sails.config.custom.dbMHost,
+      password:    sails.config.custom.dbMPass,
+      user:        sails.config.custom.dbMLogin,
+      port:        sails.config.custom.dbMPort,
+      database:    sails.config.custom.dbMName,
+    },
+
     default: {
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
@@ -221,7 +231,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     cookie: {
-      // secure: true,
+       secure: true,
       maxAge: 24 * 60 * 60 * 1000,  // 24 hours
     },
 
@@ -254,7 +264,7 @@ module.exports = {
     //   'https://example.com',
     //   'https://staging.example.com',
     // ],
-    onlyAllowOrigins: ["http://10.0.0.2:1337","http://10.0.0.2","http://168.119.185.93","http://168.119.185.93:1337"]
+
 
     /***************************************************************************
     *                                                                          *
@@ -268,7 +278,7 @@ module.exports = {
     * (https://sailsjs.com/docs/concepts/deployment/scaling)                   *
     *                                                                          *
     ***************************************************************************/
-    // adapter: '@sailshq/socket.io-redis',
+     adapter: '@sailshq/socket.io-redis',
     // url: 'redis://user:password@bigsquid.redistogo.com:9562/databasenumber',
     //--------------------------------------------------------------------------
     // /\   OR, to avoid checking it in to version control, you might opt to
@@ -325,7 +335,7 @@ module.exports = {
     * (https://sailsjs.com/config/http)                                        *
     *                                                                          *
     ***************************************************************************/
-    // trustProxy: true,
+    trustProxy: true,
 
   },
 
@@ -340,7 +350,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  port: 8080,
+   port: 8080,
 
 
 
@@ -374,7 +384,7 @@ module.exports = {
   *                                                                         *
   ***************************************************************************/
   custom: {
-    baseUrl: 'https://example.com',
+    baseUrl: 'http://example.com',
     internalEmailAddress: 'support@example.com',
 
     // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
