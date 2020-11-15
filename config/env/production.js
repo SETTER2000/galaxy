@@ -254,7 +254,7 @@ module.exports = {
     //   'https://example.com',
     //   'https://staging.example.com',
     // ],
-
+    onlyAllowOrigins: ["http://10.0.0.2:1337","http://10.0.0.2","http://168.119.185.93","http://168.119.185.93:1337"]
 
     /***************************************************************************
     *                                                                          *
@@ -340,7 +340,7 @@ module.exports = {
   * this, just try deploying without setting it and see if it works.)       *
   *                                                                         *
   ***************************************************************************/
-  // port: 80,
+  port: 8080,
 
 
 
