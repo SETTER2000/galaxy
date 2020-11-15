@@ -46,7 +46,7 @@
 ################################################
 
 config/local.js
-
+config/env/production.js
 
 ################################################
 # Dependencies
@@ -133,4 +133,4 @@ lib-cov
 *.pid
 ecosystem.*
 bin/
-/config/env/production.js
+
