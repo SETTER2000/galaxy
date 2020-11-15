@@ -1,5 +1,5 @@
 /**
- * <g-header>
+ * <gx-header>
  * -----------------------------------------------------------------------------
  * A button with a built-in loading spinner.
  *
@@ -9,18 +9,18 @@
  * -----------------------------------------------------------------------------
  */
 
-parasails.registerComponent('gHeader', {
+parasails.registerComponent('gxHeader', {
   //  ╔═╗╦═╗╔═╗╔═╗╔═╗
   //  ╠═╝╠╦╝║ ║╠═╝╚═╗
   //  ╩  ╩╚═╚═╝╩  ╚═╝
   props: [
-    'syncing'
+
   ],
 
   //  ╦╔╗╔╦╔╦╗╦╔═╗╦    ╔═╗╔╦╗╔═╗╔╦╗╔═╗
   //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
   //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
-  data: function (){
+  data: function () {
     return {
       //…
     };
@@ -30,30 +30,19 @@ parasails.registerComponent('gHeader', {
   //  ╠═╣ ║ ║║║║
   //  ╩ ╩ ╩ ╩ ╩╩═╝
   template: `
-    <div id="index-banner" class="parallax-container">
-        <div class="section no-pad-bot">
-            <div class="container">
-              <!--  <div class="row center">
-                    <h5 class="header col s12 text-lighten-3"> +7-906-798-64-74 WhatsApp Татьяна Чистонова
-                        alise.70@mail.ru </h5>
-                </div>-->
-            </div>
-        </div>
-        <div class="parallax">
-        <img src="https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg" alt="Питомник Шоу Галактика"></div>
-    </div>
+<header class="gx-header grid" style="background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg)">  </header>
   `,
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗
   //  ║  ║╠╣ ║╣ ║  ╚╦╝║  ║  ║╣
   //  ╩═╝╩╚  ╚═╝╚═╝ ╩ ╚═╝╩═╝╚═╝
-  beforeMount: function() {
+  beforeMount: function () {
     //…
   },
-  mounted: async function(){
+  mounted: async function () {
     //…
   },
-  beforeDestroy: function() {
+  beforeDestroy: function () {
     //…
   },
 
@@ -62,7 +51,7 @@ parasails.registerComponent('gHeader', {
   //  ╩╝╚╝ ╩ ╚═╝╩╚═╩ ╩╚═╝ ╩ ╩╚═╝╝╚╝╚═╝
   methods: {
 
-    click: async function(){
+    click: async function () {
       this.$emit('click');
     },
 

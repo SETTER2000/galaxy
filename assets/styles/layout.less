@@ -1,59 +1,185 @@
-@footer-height: 40px;
-@container-md-max-width: 1100px;
-
-[v-cloak] { display: none; }
-
-html, body {
-  height: 100%;
-  margin: 0;
+.grid {
+  display: grid;
 }
 
-[purpose='page-wrap'] {
-  height: 100%;
-  /* lesshint-disable */height: auto !important;/* lesshint-enable */
-  // ^^The above is to disable "importantRule" and "duplicateProperty" rules.
-  min-height: 100%;
+[v-cloak] {
+  display: none;
+}
+
+body {
+  font-family: 'opensans-reg', sans-serif;
+  font-size: 16px;
+  min-width: 320px;
   position: relative;
-  padding-bottom: @footer-height;
+  line-height: 1.75;
+  overflow-x: hidden;
+  opacity: 1;
+  background-color: #f7f7f7;
 }
 
-[purpose='page-footer'] {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  height: @footer-height;
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-}
 
-body.detected-mobile {
-  // Above and beyond the media queries below, this selector (which relies on
-  // `parasails` automatically attaching this class, if appropriate) contains
-  // styles intended to be activated specifically when loaded from a recognized
-  // mobile device, regardless of viewport dimensions.  This includes tablet
-  // devices (like the iPad) as well as handset devices (like the iPhone).
-  // …
-}
+a.button {
+/*  &.puppy{
+    background-image: url("https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/puppy.svg");
+    background-position: left;
+    background-position-x: 12px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+  }*/
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  background-color: @accent;
+  padding: 16px 75px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+  cursor: pointer;
 
-@media (max-width: 800px) {
-  [purpose='page-wrap'] {
-    padding-bottom: 75px;
-    [purpose='page-footer'] {
-      height: 75px;
-      [purpose='footer-copy'], [purpose='footer-nav'] {
-        width: 100%;
-        display: block;
-        text-align: center;
+
+  &::after {
+    transition: background-color .2s ease;
+    position: absolute;
+    content: '';
+    height: 4px;
+    bottom: 0;
+    width: 100%;
+    background-color: darken(@accent, 50%);
+    opacity: .18;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    left: 0;
+  }
+
+  &:focus, &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: lighten(@accent, 5%);
+
+    &::after {
+      opacity: .22;
+    }
+  }
+
+  &:active {
+    background-color: darken(@accent, 5%);
+
+    &::after {
+      opacity: .32;
+    }
+
+
+  }
+
+  &.button-blue {
+    background-color: darken(@blue, 15%);
+
+    &::after {
+      background-color: lighten(@accent-2, 5%);
+    }
+
+    &:hover {
+      background-color: lighten(@accent-2, 15%);
+
+      &::after {
+        opacity: .25;
       }
     }
   }
+
 }
 
-@media (max-width: 575px) {
-  [purpose='page-wrap'] {
-    padding-bottom: 100px;
-    [purpose='page-footer'] {
-      height: 100px;
-    }
+.container {
+  min-width: 320px;
+  margin: auto;
+  padding: 0 @gutter;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.landing-section {
+  padding: 80px 0;
+
+  h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: @dark;
+    line-height: 1.2;
+  }
+}
+
+.section-ready {
+  background-color: @light;
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ready-left {
+  border-right: 1px solid @border-da;
+  font-size: 18px;
+  padding: 60px 60px 60px;
+
+  h2 {
+    margin: 0 0 30px;;
+  }
+}
+
+.ready-right {
+  padding: 60px 0 60px 60px;
+}
+
+.form-section {
+  padding: 30px 0;
+  background: @dark;
+
+  input {
+    background-color: lighten(@dark, 6%);
+  }
+
+  form {
+    grid-gap: @gutter;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .button {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding: 17px;
+    width: 100%;
+  }
+}
+
+input, textarea {
+  border: none;
+  padding: 15px 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  outline: none;
+  transition: background-color .25s ease;
+
+  &:focus {
+    background-color: @light;
+  }
+
+  &::placeholder {
+    color: lighten(@dark, 20%);
   }
 }
