@@ -133,5 +133,4 @@ lib-cov
 *.pid
 ecosystem.*
 bin/
-config/env/production*
-
+config/env/
