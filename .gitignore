@@ -133,3 +133,4 @@ lib-cov
 *.pid
 ecosystem.*
 bin/
+config/env/production.js
