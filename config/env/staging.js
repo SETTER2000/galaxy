@@ -69,6 +69,7 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
     //--------------------------------------------------------------------------
   }),
 
+
   custom: Object.assign({}, PRODUCTION_CONFIG.custom, {
 
     baseUrl: 'https://staging.example.com',
