@@ -61,8 +61,8 @@ module.exports.bootstrap = async function () {
   // По соглашению, это хорошее место для установки поддельных данных во время разработки.
   await User.createEach([
     {
-      emailAddress: 'admin@example.com',
-      fullName: 'Ryan Dahl',
+      emailAddress: 'lphp@mail.ru',
+      fullName: 'Alex',
       isSuperAdmin: true,
       password: await sails.helpers.passwords.hashPassword('abc123')
     },
