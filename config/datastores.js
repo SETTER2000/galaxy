@@ -38,8 +38,6 @@ module.exports.datastores = {
     user: 'dog',
     password: '4211817',
     database: 'galaxy',
-    //url: 'mongodb://fox:4211817@localhost:27017/patzi',
-
   },
 
 
