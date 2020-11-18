@@ -20,8 +20,6 @@
  */
 
 module.exports = {
-
-
   /**************************************************************************
    *                                                                         *
    * Tell Sails what database(s) it should use in production.                *
@@ -30,8 +28,6 @@ module.exports = {
    *                                                                         *
    **************************************************************************/
   datastores: {
-
-
     /***************************************************************************
      *                                                                          *
      * Configure your default production database.                              *
@@ -134,7 +130,6 @@ module.exports = {
     shortcuts: false,
   },
 
-
   /***************************************************************************
    *                                                                          *
    * Configure your security settings for production.                         *
@@ -147,7 +142,6 @@ module.exports = {
    *                                                                          *
    ***************************************************************************/
   security: {
-
     /***************************************************************************
      *                                                                          *
      * If this app has CORS enabled (see `config/security.js`) with the         *
