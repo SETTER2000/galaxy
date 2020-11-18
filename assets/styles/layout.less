@@ -6,6 +6,19 @@
   display: none;
 }
 
+#wrapper {
+  .header {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+  }
+  .sidebar, .header {
+    //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+    overflow-y:auto;
+    border-right: .2px solid #dad8d8;
+  }
+}
+*, :after, :before {
+  box-sizing: inherit;
+}
 body {
   font-family: 'opensans-reg', sans-serif;
   font-size: 16px;
@@ -19,14 +32,14 @@ body {
 
 
 a.button {
-/*  &.puppy{
-    background-image: url("https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/puppy.svg");
-    background-position: left;
-    background-position-x: 12px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: auto;
-  }*/
+  /*  &.puppy{
+      background-image: url("https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/puppy.svg");
+      background-position: left;
+      background-position-x: 12px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: auto;
+    }*/
   display: inline-block;
   border: none;
   text-decoration: none;
@@ -98,6 +111,15 @@ a.button {
     }
   }
 
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin-left: 0; /* Отступ слева в браузере IE и Opera */
+  padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
 
 .container {

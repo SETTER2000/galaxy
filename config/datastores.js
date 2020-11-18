@@ -32,12 +32,13 @@ module.exports.datastores = {
    *                                                                          *
    ***************************************************************************/
   mongodb: {
-    adapter: 'sails-mongo',
-    host: 'localhost',
+  adapter: 'sails-mongo',
+     host: 'localhost',
     port: 27017,
     user: 'dog',
     password: '4211817',
     database: 'galaxy',
+   // url:'mongodb://dogkennel:Tel-4211817@168.119.185.93:27017/galaxy'
   },
 
 

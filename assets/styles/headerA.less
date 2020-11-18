@@ -1,0 +1,35 @@
+#headerA {
+  display: grid;
+
+  min-height: 100%;
+  //padding-top: 1rem;
+  //grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: [logo] 1fr [search] 2fr [menu] 3fr;
+
+  .logo {
+    //grid-row:;
+    grid-column: logo;
+    background-color: #f0daf8;
+
+  }
+
+  .search {
+    //grid-row: ;
+    grid-column: search;
+    background-color: #abe6e1;
+    //padding:0 2rem;
+  }
+
+  .menu {
+
+    grid-column: menu;
+    //padding:0 2rem;
+    background-color: white;
+  }
+
+  .menu, .search, .logo {
+    align-self: center;
+  }
+}
+
+

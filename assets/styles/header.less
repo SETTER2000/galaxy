@@ -1,48 +1,51 @@
-.gx-header{
-  min-height: 100vh;
-  background-size: contain;
-  background-position: center;
-  position: relative;
-  align-content: center;
-  background-repeat: no-repeat;
-  //background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg);
- background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/R5.svg);
-  &::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: darken(@accent-3, 10%);
-    opacity: .90;
-  }
-  .header-content{
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 60px @gutter;
-    h1{
-      font-size: 11rem;
-      font-weight: lighter;
-      //font-family: 'Lobster', cursive;
-      font-family: 'Alex Brush',cursive !important;
-      //font-family: 'Qwigley',cursive !important;
-      //font-family: 'penhurss',cursive !important;
-      //font-family: 'Philosopher', sans-serif;
-      //font-family: 'Italianno', cursive;
-      margin: 20px 0;
-      line-height: 1.5;
+#header{
+  .gx-header{
+    min-height: 100vh;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    align-content: center;
+    background-repeat: no-repeat;
+    //background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg);
+    background-image: url(https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/R5.svg);
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: darken(@accent-3, 10%);
+      opacity: .90;
     }
-    h3{
-      font-family: 'Alex Brush',cursive !important;
-      //font-family: 'Qwigley',cursive !important;
-      font-size: 3.1rem;
-    }
-    .button{
-      margin: 10px;
-    }
+    .header-content{
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 60px @gutter;
+      h1{
+        font-size: 11rem;
+        font-weight: lighter;
+        //font-family: 'Lobster', cursive;
+        font-family: 'Alex Brush',cursive !important;
+        //font-family: 'Qwigley',cursive !important;
+        //font-family: 'penhurss',cursive !important;
+        //font-family: 'Philosopher', sans-serif;
+        //font-family: 'Italianno', cursive;
+        margin: 20px 0;
+        line-height: 1.5;
+      }
+      h3{
+        font-family: 'Alex Brush',cursive !important;
+        //font-family: 'Qwigley',cursive !important;
+        font-size: 3.1rem;
+      }
+      .button{
+        margin: 10px;
+      }
 
+    }
   }
 }
+
 

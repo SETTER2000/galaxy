@@ -49,9 +49,12 @@ module.exports = {
      ***************************************************************************/
 
     mongodb: {
-      adapter: 'sails-mongo',
-      host: 'localhost',
-      port: 27017,
+      adapter:process.env.MD_ADDAP,
+      host:process.env.MD_HOST,
+      port:process.env.MD_PORT,
+      user:process.env.MD_LOGIN,
+      password:process.env.MD_PASS,
+      database:process.env.MD_DB
     },
 
 
@@ -377,8 +380,9 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl: 'https://168.119.185.93',
-    internalEmailAddress: 'support@example.com',
+    baseUrl:'http://168.119.185.93',
+    internalEmailAddress: process.env.GL_INTERNALEMAIL,
+
 
     // sendgridSecret: 'SG.fake.3e0Bn0qSQVnwb1E4qNPz9JZP5vLZYqjh7sn8S93oSHU',
     // stripeSecret: 'sk_prod__fake_Nfgh82401348jaDa3lkZ0d9Hm',
