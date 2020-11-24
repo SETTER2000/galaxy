@@ -37,8 +37,7 @@ module.exports.datastores = {
     port: 27017,
     user: 'dog',
     password: '4211817',
-    database: 'galaxy',
-   // url:'mongodb://dogkennel:Tel-4211817@168.119.185.93:27017/galaxy'
+    database: 'galaxy'
   },
 
 
