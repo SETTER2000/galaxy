@@ -258,7 +258,7 @@ module.exports = {
     //   'https://example.com',
     //   'https://staging.example.com',
     // ],
-    onlyAllowOrigins: ['http://10.0.0.2:1337', 'http://10.0.0.2', 'http://168.119.185.93', 'http://168.119.185.93:1337'],
+    onlyAllowOrigins: ['http://10.0.0.2:8080', 'http://10.0.0.2', 'http://168.119.185.93'],
 
 
     /***************************************************************************
@@ -342,7 +342,7 @@ module.exports = {
    * this, just try deploying without setting it and see if it works.)       *
    *                                                                         *
    ***************************************************************************/
-  port: 8080,
+ // port: 8080,
 
 
   /**************************************************************************
@@ -374,7 +374,7 @@ module.exports = {
    *                                                                         *
    ***************************************************************************/
   custom: {
-    baseUrl:'http://168.119.185.93',
+    baseUrl:'https://web-webinar.ru',
     internalEmailAddress: process.env.GL_INTERNALEMAIL,
 
 
