@@ -55,7 +55,6 @@ module.exports = {
 
 
 
-
     default: {
       // adapter: 'sails-mysql',
       // url: 'mysql://user:password@host:port/database',
@@ -258,7 +257,8 @@ module.exports = {
     //   'https://example.com',
     //   'https://staging.example.com',
     // ],
-    onlyAllowOrigins: ['http://10.0.0.2:8080', 'http://10.0.0.2', 'http://168.119.185.93'],
+    onlyAllowOrigins: ['https://web-webinar.ru','https://www.web-webinar.ru'],
+
 
 
     /***************************************************************************
@@ -328,7 +328,7 @@ module.exports = {
      * (https://sailsjs.com/config/http)                                        *
      *                                                                          *
      ***************************************************************************/
- //   trustProxy: true,
+     trustProxy: true,
 
   },
 
@@ -391,5 +391,5 @@ module.exports = {
     // ```
     //--------------------------------------------------------------------------
 
-  },
+  }
 };
