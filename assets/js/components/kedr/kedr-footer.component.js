@@ -34,13 +34,14 @@ parasails.registerComponent('kedrFooter', {
 <!--<div :style="styleObj" ref="$wrapper"></div>-->
    <footer id="pageFooter">
         <div id="footer-a">
-         <div id="other"></div>
-         <div id="copyright"><span>2020 © Copyright </span> <span>Design by <a href="//lphp.ru">lphp.ru</a></span></div>
-            <div id="menu">
-            <kedr-version>kerd</kedr-version>
+             <div id="other"></div>
+             <div id="copyright" class="d-flex justify-content-between">
+                 <div>  <span>2020 © Copyright Design by <a href="//lphp.ru">lphp.ru</a></span></div>
+                   <div>   <kedr-version>kerd</kedr-version>  </div>
+            </div>
+            <div id="menu">  </div>
         </div>
-        </div>
-        </footer>
+   </footer>
 
 `,
 

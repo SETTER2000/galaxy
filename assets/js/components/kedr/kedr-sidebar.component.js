@@ -30,7 +30,7 @@ parasails.registerComponent('kedrSidebar', {
   //  ╦ ╦╔╦╗╔╦╗╦
   //  ╠═╣ ║ ║║║║
   //  ╩ ╩ ╩ ╩ ╩╩═╝
-  template: `<div id="siteAds">Ads</div>`,
+  template: `<div id="siteAds"></div>`,
 
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗

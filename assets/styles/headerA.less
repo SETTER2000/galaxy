@@ -53,6 +53,9 @@
         &:focus {
           background-color: @bglight;
           color: @copy;
+          &::placeholder {
+            color: darken(@color-text-menu,10%);
+          }
         }
 
         &::placeholder {
@@ -71,7 +74,7 @@
           top: 0;
 
           i {
-            padding-top: 10px;
+            padding: 25px 55px 25px 25px;
           }
 
           &:hover {
