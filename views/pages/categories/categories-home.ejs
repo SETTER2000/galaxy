@@ -1,0 +1,47 @@
+<div id="categories-home" v-cloak>
+  <article id="mainArticle">
+  <div id="title">
+    <h1>Разделы</h1>
+    <h6><em>{{help.title}}</em></h6>
+    <hr>
+  </div>
+  <div id="left">
+    <h2>Создать</h2>
+    <em>{{help.create}}</em>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <div id="right">
+    <h2>Редактировать</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, mollitia.</p>
+    <p>Ad in molestias nemo nesciunt nobis sint sit vitae, voluptates?</p>
+    <p>Aliquid corporis cum dicta distinctio eveniet, inventore nobis perferendis vel!</p>
+    <p>Adipisci aspernatur autem dolore inventore sit suscipit tempora temporibus, vitae!</p>
+    <p>Alias, blanditiis consectetur inventore ipsa natus quas quos suscipit voluptatum?</p>
+    <p>Ab cum dolor illo mollitia praesentium saepe sequi ut voluptatibus.</p>
+    <p>Alias aperiam commodi dolor eius inventore molestias nam nostrum, qui?</p>
+    <p>Dolor id, ipsa iste necessitatibus possimus quas quasi repellendus sequi.</p>
+    <p>Aperiam facilis neque voluptatum. Aspernatur eligendi fugiat ipsam mollitia rem.</p>
+    <p>Aut et explicabo totam veniam voluptatum. Earum numquam veritatis vero!</p>
+  </div>
+  </article>
+  <kedr-header></kedr-header>
+  <kedr-navbar :current-section="currentSection"></kedr-navbar>
+  <kedr-sidebar></kedr-sidebar>
+  <kedr-footer></kedr-footer>
+</div>
+<%- /* Expose server-rendered data as window.SAILS_LOCALS :: */ exposeLocalsToBrowser() %>

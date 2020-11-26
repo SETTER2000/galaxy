@@ -3,7 +3,10 @@ parasails.registerPage('homepage', {
   //  ║║║║║ ║ ║╠═╣║    ╚═╗ ║ ╠═╣ ║ ║╣
   //  ╩╝╚╝╩ ╩ ╩╩ ╩╩═╝  ╚═╝ ╩ ╩ ╩ ╩ ╚═╝
   data: {
-    bgImg:{src:'https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg'}
+    bgImg:{src:'https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/show-galaktika-header.jpg'},
+
+
+
   },
 
   //  ╦  ╦╔═╗╔═╗╔═╗╦ ╦╔═╗╦  ╔═╗

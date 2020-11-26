@@ -6,20 +6,140 @@
   display: none;
 }
 
-#wrapper {
-  .header {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+#welcome, #articles-home, #categories-home{
+  display: grid;
+  grid-template-areas: "header header header" "nav article ads" "footer footer footer";
+  grid-template-rows: min-content 1fr 60px;
+  grid-template-columns: 15% 1fr 15%;
+
+  grid-gap: 10px;
+  height: 100vh;
+  margin: 0;
+
+  header, footer, article, nav, div {
+    //background: @bglight;
   }
-  .sidebar, .header {
-    //box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
-    overflow-y:auto;
-    border-right: .2px solid #dad8d8;
+
+  #pageHeader {
+    grid-area: header;
+    background-color: @orange;
+  }
+
+  #pageFooter {
+    grid-area: footer;
+  }
+
+  #mainArticle {
+    grid-area: article;
+    display: grid;
+    grid-template-areas: "title title" "left right";
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 25px;
+
+    #left, #right {
+      padding: 0 1.5vw;
+    }
+
+    #title {
+      grid-area: title;
+      padding: 1.5vw;
+    }
+
+    #left {
+      grid-area: left;
+    }
+
+    #right {
+      grid-area: right;
+    }
+  }
+
+  #mainNav {
+    grid-area: nav;
+    border-right: .1px solid @light;
+
+    .kedr-navbar {
+      li {
+        float: none;
+        line-height: 48px;
+        display: list-item;
+
+        a {
+          color: rgba(0, 0, 0, .87);
+          display: block;
+          font-size: 14px;
+          font-weight: 500;
+          height: 48px;
+          line-height: 48px;
+          padding: 0 32px;
+
+          &:hover, &.current {
+            background-color: #eeeeee;
+          }
+
+          &.action, &:active {
+            background-color: #e2e2e2;
+          }
+
+        }
+      }
+    }
+  }
+
+  #siteAds {
+    grid-area: ads;
+  }
+
+}
+
+#out {
+  .form-section {
+    padding: 30px 0;
+    background: @dark;
+
+    input {
+      background-color: lighten(@dark, 6%);
+    }
+
+    form {
+      grid-gap: @gutter;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .p-button {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      padding: 17px;
+      width: 100%;
+    }
+  }
+
+  input, textarea {
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    outline: none;
+    transition: background-color .25s ease;
+
+    &:focus {
+      background-color: @light;
+    }
+
+    &::placeholder {
+      color: lighten(@dark, 20%);
+    }
   }
 }
+
 *, :after, :before {
   box-sizing: inherit;
 }
+
 body {
+  display: grid;
   font-family: 'opensans-reg', sans-serif;
   font-size: 16px;
   min-width: 320px;
@@ -27,11 +147,12 @@ body {
   line-height: 1.75;
   overflow-x: hidden;
   opacity: 1;
-  background-color: #f7f7f7;
+  background-color: @bglight;
+
 }
 
 
-a.button {
+a.p-button {
   /*  &.puppy{
       background-image: url("https://d3a1wbnh2r1l7y.cloudfront.net/show_galaktika/puppy.svg");
       background-position: left;
@@ -95,7 +216,7 @@ a.button {
 
   }
 
-  &.button-blue {
+  &.p-button-blue {
     background-color: darken(@blue, 15%);
 
     &::after {
@@ -167,41 +288,7 @@ ul {
   padding: 60px 0 60px 60px;
 }
 
-.form-section {
-  padding: 30px 0;
-  background: @dark;
 
-  input {
-    background-color: lighten(@dark, 6%);
-  }
 
-  form {
-    grid-gap: @gutter;
-    grid-template-columns: repeat(4, 1fr);
-  }
 
-  .button {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    padding: 17px;
-    width: 100%;
-  }
-}
 
-input, textarea {
-  border: none;
-  padding: 15px 20px;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  font-style: italic;
-  outline: none;
-  transition: background-color .25s ease;
-
-  &:focus {
-    background-color: @light;
-  }
-
-  &::placeholder {
-    color: lighten(@dark, 20%);
-  }
-}

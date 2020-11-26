@@ -1,0 +1,35 @@
+#footer-a {
+  display: grid;
+  grid-template-areas: "other copyright  menu";
+  grid-template-rows: 1fr;
+  grid-template-columns: 15% 1fr 45%;
+  height: min-content;
+  font-size: 1rem;
+  border-top: .1px solid @light;
+  @color-text-menu: @orange;
+  color: @color-text-menu;
+  align-items: baseline;
+  padding: @gutter;
+  a {
+    text-decoration: none;
+    color: @color-text-menu;
+  }
+
+  #copyright {
+    grid-area: copyright;
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+
+  #other {
+    grid-area: other;
+  }
+
+  #menu {
+    grid-area: menu;
+    text-align: right;
+  }
+
+}
+
+
