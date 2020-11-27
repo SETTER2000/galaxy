@@ -155,6 +155,11 @@ without necessarily having a billing card.`
       example: 1502844074211
     },
 
+    settings:{
+      type:'ref',
+      defaultsTo: {},
+      description:'Объект с настройками интерфейса cms'
+    },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝

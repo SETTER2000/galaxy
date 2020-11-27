@@ -11,7 +11,7 @@
             <em>{{help.create}}</em>
 
             <section class="form-create">
-                <el-form :label-position="labelPosition" :model="ruleForm" :rules="rules" ref="ruleForm"
+                <el-form :label-position="me.settings.form.position" :model="ruleForm" :rules="rules" ref="ruleForm"
                          label-width="100px" class="demo-ruleForm">
                     <el-form-item label="Название" prop="name">
                         <el-input v-model="ruleForm.name" :maxlength="maxLength" show-word-limit></el-input>
@@ -27,30 +27,13 @@
                 </el-form>
             </section>
 
-            <!--   <h2>Lorem ipsum dolor sit amet, consectetur.</h2>
-               <em>{{help.create}}</em>
-               <section class="form-create">
-                   <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-                       <el-form-item label="Название" prop="name">
-                           <el-input v-model="ruleForm.name" :maxlength="maxLength" show-word-limit></el-input>
-                       </el-form-item>
-                       <el-form-item label="URL" prop="url">
-                           <el-input v-model="ruleForm.url"></el-input>
-                       </el-form-item>
-
-                       <el-form-item>
-                           <el-button type="primary" @click="submitForm('ruleForm')">Отправить</el-button>
-                           <el-button @click="resetForm('ruleForm')">Очистить</el-button>
-                       </el-form-item>
-                   </el-form>
-               </section>-->
 
         </div>
         <div id="right">
             <h2>Редактировать</h2>
             <em>{{help.edit}}</em>
             <section class="form-create">
-                <el-form :label-position="labelPosition" :model="ruleForm" :rules="rules" ref="ruleForm"
+                <el-form :label-position="me.settings.form.position" :model="ruleForm" :rules="rules" ref="ruleForm"
                          label-width="100px" class="demo-ruleForm">
                     <el-form-item label="Название" prop="name">
                         <el-input v-model="ruleForm.name" :maxlength="maxLength" show-word-limit></el-input>
@@ -77,12 +60,12 @@
             :visible.sync="drawer"
             :with-header="false">
 <h3>Настройки</h3>
-        <section>
+        <section >
             <h5>Положение форм</h5>
-            <el-radio-group v-model="labelPosition" size="small">
-                <el-radio-button label="left">Left</el-radio-button>
-                <el-radio-button label="right">Right</el-radio-button>
-                <el-radio-button label="top">Top</el-radio-button>
+            <el-radio-group v-model="me.settings.form.position" size="small" @change="formPosition()">
+                <el-radio-button    label="left">Left</el-radio-button>
+                <el-radio-button   label="right">Right</el-radio-button>
+                <el-radio-button   label="top">Top</el-radio-button>
             </el-radio-group>
         </section>
     </el-drawer>
